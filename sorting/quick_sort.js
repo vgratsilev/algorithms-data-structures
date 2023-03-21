@@ -1,6 +1,6 @@
 /**
- * Time complexity O(n * log n)
- * Space complexity O(n * log n)
+ * Time complexity O(n * log n) is average, O(n^2) in worst
+ * Space complexity O(log n)
  */
 
 const array = [ 0, 3, 4, 2, -1, 3, 6, 7, 13, -4, 45, 22, 53, 16 ];

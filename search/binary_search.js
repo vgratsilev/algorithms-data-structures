@@ -28,3 +28,21 @@ function binarySearch(array, item) {
 console.log(binarySearch(array, 5));
 console.log(binarySearch(array, 2));
 console.log(binarySearch(array, 29));
+
+function binarySearchRecursive(array, item, start, end) {
+    let middle = Math.floor((end + start) / 2);
+
+    if(item === array[middle]) {
+        return middle;
+    }
+
+    if(item < array[middle]) {
+        return binarySearchRecursive(array, item, start, middle - 1);
+    } else {
+        return binarySearchRecursive(array, item, middle + 1, end);
+    }
+}
+
+console.log(binarySearchRecursive(array, 5, 0, array.length));
+console.log(binarySearchRecursive(array, 2, 0, array.length));
+console.log(binarySearchRecursive(array, 29, 0, array.length));
